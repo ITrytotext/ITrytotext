@@ -1,0 +1,14 @@
+_G.autoTap = true
+while _G.autoTap == true do
+
+function getNil(name,class) for _,v in pairs(getnilinstances())do if v.ClassName==class and v.Name==name then return v;end end end
+
+local args = {
+    [1] = getNil("Ice Wolf", "Model"),
+    [2] = getNil("CombatFolder", "Folder").I_AlsoT3aB4gPeople.Sol_GreatswordOrb
+}
+
+game:GetService("ReplicatedStorage").Remotes.Damage:FireServer(unpack(args))
+
+    wait()
+end
